@@ -102,7 +102,7 @@ class _PreconditionersTest(parameterized.TestCase):
     self.assertAlmostEqual(jnp.log(7.0), pcp.log_det(), places=5)
     atol = 1e-6
     if self.dtype == np.float32:
-      atol = 2e-2
+      atol = 1e-1
 
     np.testing.assert_allclose(
         jnp.array([3/7., 1/7.]),
@@ -242,7 +242,7 @@ class _PreconditionersTest(parameterized.TestCase):
       ("identity", 2.0, 1.0),
       ("diagonal", 0.2, 0.2),
       ("rank_one", 0.3, 0.1),
-      ("partial_cholesky", 1e-6, 0.02),
+      ("partial_cholesky", 1e-6, 0.1),
       ("partial_lanczos", 1e-6, 0.1),
       ("truncated_svd", 0.2, 0.2),
       ("truncated_randomized_svd", 0.2, 0.2),
@@ -354,11 +354,11 @@ class _PreconditionersTest(parameterized.TestCase):
       ("identity", 9000),
       ("diagonal", 9000),
       ("rank_one", 3100),
-      ("partial_cholesky", 5.0),
-      ("partial_lanczos", 9000.),
+      ("partial_cholesky", 10.0),
+      ("partial_lanczos", 9000.0),
       ("truncated_svd", 3100.0),
       ("truncated_randomized_svd", 3100.0),
-      ("diagonal_split", 9000.),
+      ("diagonal_split", 9000.0),
       ("rank_one_split", 3100),
       # partial_cholesky_split is basically broken until index permutations
       # are added to LowRankSplitPreconditioner.

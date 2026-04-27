@@ -420,9 +420,11 @@ class MinimizeStatelessTests(test_util.TestCase):
     final_x, _ = self.evaluate(
         minimize_stateless(
             loss_fn,
-            init=NormalParameters(loc=-1., scale=0.1),
+            init=NormalParameters(loc=np.float32(-1.0), scale=np.float32(0.1)),
             num_steps=250,
-            optimizer=optax.adam(0.1)))
+            optimizer=optax.adam(0.1),
+        )
+    )
     # Returned parameters should match `init` structure.
     self.assertAllClose(final_x.loc, 0., atol=0.1)
     self.assertAllClose(final_x.scale, 1., atol=0.2)

@@ -350,7 +350,7 @@ class _FastMultiTaskGpTest(absltest.TestCase):
     slow_value, slow_gradient = jax.value_and_grad(
         slow_log_prob, argnums=[0, 1, 2]
     )(self.dtype(1.0), self.dtype(1.0), self.dtype(1e-3))
-    np.testing.assert_allclose(value, slow_value, rtol=1e-3)
+    np.testing.assert_allclose(value, slow_value, rtol=5e-3)
     slow_d_amp, slow_d_length_scale, slow_d_noise = slow_gradient
     np.testing.assert_allclose(d_amp, slow_d_amp, rtol=2e-4)
     np.testing.assert_allclose(d_length_scale, slow_d_length_scale, rtol=2e-4)

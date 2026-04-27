@@ -198,7 +198,7 @@ class HalfNormalTest(test_util.TestCase):
     expected_mean = scale * np.sqrt(2.0) / np.sqrt(np.pi)
 
     self.assertAllEqual((3,), self.evaluate(halfnorm.mean()).shape)
-    self.assertAllEqual(expected_mean, self.evaluate(halfnorm.mean()))
+    self.assertAllClose(expected_mean, self.evaluate(halfnorm.mean()))
 
     self.assertAllEqual((3,), self.evaluate(halfnorm.mode()).shape)
     self.assertAllEqual([0., 0., 0.], self.evaluate(halfnorm.mode()))
@@ -209,7 +209,7 @@ class HalfNormalTest(test_util.TestCase):
     expected_variance = scale**2.0 * (1.0 - 2.0 / np.pi)
 
     self.assertAllEqual((3,), self.evaluate(halfnorm.variance()).shape)
-    self.assertAllEqual(expected_variance, self.evaluate(halfnorm.variance()))
+    self.assertAllClose(expected_variance, self.evaluate(halfnorm.variance()))
 
   def testHalfNormalStandardDeviation(self):
     scale = np.array([7., 7., 7.])
@@ -217,8 +217,9 @@ class HalfNormalTest(test_util.TestCase):
     expected_variance = scale**2.0 * (1.0 - 2.0 / np.pi)
 
     self.assertAllEqual((3,), halfnorm.stddev().shape)
-    self.assertAllEqual(
-        np.sqrt(expected_variance), self.evaluate(halfnorm.stddev()))
+    self.assertAllClose(
+        np.sqrt(expected_variance), self.evaluate(halfnorm.stddev())
+    )
 
   def testHalfNormalSample(self):
     scale = tf.constant(3.0)

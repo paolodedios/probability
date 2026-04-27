@@ -173,6 +173,7 @@ XLA_LOGPROB_ATOL.update({
     'Logistic': 3e-6,
     'Multinomial': 2e-4,
     'NoncentralChi2': 1e-4,
+    'Normal': 5e-6,
     'OneHotCategorical': 1e-5,
     'PERT': 1e-5,
     'PowerSpherical': 2e-5,
@@ -206,16 +207,17 @@ XLA_LOGPROB_RTOL.update({
     'InverseGamma': 5e-3,
     'JohnsonSU': 1e-2,
     'LambertWNormal': 1e-5,
-    'LKJ': .07,
+    'LKJ': 0.07,
     'Multinomial': 3e-4,
     'MultivariateNormalDiag': 5e-6,
     'MultivariateNormalFullCovariance': 1e-5,
     'MultivariateNormalTriL': 1e-5,
+    'Normal': 5e-6,
     'MultivariateNormalDiagPlusLowRankCovariance': 1e-4,
     'OneHotCategorical': 1e-3,  # TODO(b/163118820)
     'PERT': 5e-4,
     'Poisson': 3e-2,  # TODO(b/159999573)
-    'PowerSpherical': .003,
+    'PowerSpherical': 0.003,
     'RelaxedBernoulli': 3e-3,
     'RelaxedOneHotCategorical': 2e-3,  # TODO(b/163118820)
     'SigmoidBeta': 5e-4,

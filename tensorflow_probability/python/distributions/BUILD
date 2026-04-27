@@ -4943,7 +4943,7 @@ py_test(
         # hypothesis dep,
         # numpy dep,
         # six dep,
-        # tensorflow dep,
+        # tensorflow:tensorflow_no_contrib dep,
         "//tensorflow_probability/python/internal:hypothesis_testlib",
         "//tensorflow_probability/python/internal:tensor_util",
         "//tensorflow_probability/python/internal:test_util",

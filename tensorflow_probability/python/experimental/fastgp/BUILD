@@ -145,6 +145,7 @@ py_test(
     shard_count = 3,
 #     strict_deps = False,  # DisableOnExport
     deps = [
+        ":fast_gp",
         ":fast_mtgp",
         # absl/testing:absltest dep,
         # jax dep,
@@ -293,6 +294,7 @@ py_test(
         # absl/testing:absltest dep,
         # absl/testing:parameterized dep,
         # jax dep,
+        # numpy dep,
         "//tensorflow_probability/python/internal/backend/jax",
     ],
 )
