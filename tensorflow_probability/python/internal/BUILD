@@ -16,7 +16,6 @@
 #   Internal utilities for TensorFlow probability.
 
 # [internal] load pytype.bzl (pytype_strict_test)
-# [internal] load strict.bzl
 # Placeholder: py_library
 # Placeholder: py_test
 load(
@@ -516,7 +515,6 @@ multi_substrate_py_test(
     ],
 )
 
-# py_strict
 py_test(
     name = "prefer_static_shape64_test",
     size = "small",

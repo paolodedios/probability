@@ -16,7 +16,6 @@
 #   A package for target densities.
 
 # [internal] load pytype.bzl (pytype_strict_library)
-# [internal] load strict.bzl
 # Placeholder: py_library
 # Placeholder: py_test
 
@@ -70,7 +69,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "banana_test",
     srcs = ["banana_test.py"],
@@ -93,7 +91,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "bayesian_model_test",
     srcs = ["bayesian_model_test.py"],
@@ -120,7 +117,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "brownian_motion_test",
     size = "large",
@@ -146,7 +142,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "dirichlet_test",
     srcs = ["dirichlet_test.py"],
@@ -171,7 +166,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "eight_schools_test",
     srcs = ["eight_schools_test.py"],
@@ -194,7 +188,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "ill_conditioned_gaussian_test",
     srcs = ["ill_conditioned_gaussian_test.py"],
@@ -219,7 +212,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "item_response_theory_test",
     size = "large",
@@ -248,7 +240,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "log_gaussian_cox_process_test",
     size = "large",
@@ -276,7 +267,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "logistic_regression_test",
     size = "large",
@@ -306,7 +296,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "lorenz_system_test",
     size = "large",
@@ -356,7 +345,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "neals_funnel_test",
     srcs = ["neals_funnel_test.py"],
@@ -379,7 +367,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "non_identifiable_quartic_test",
     srcs = ["non_identifiable_quartic_test.py"],
@@ -404,7 +391,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "plasma_spectroscopy_test",
     srcs = ["plasma_spectroscopy_test.py"],
@@ -430,7 +416,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "probit_regression_test",
     size = "large",
@@ -461,7 +446,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "radon_contextual_effects_test",
     srcs = ["radon_contextual_effects_test.py"],
@@ -489,7 +473,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "sparse_logistic_regression_test",
     size = "large",
@@ -518,7 +501,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "stochastic_volatility_test",
     size = "large",
@@ -543,7 +525,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "vector_model_test",
     srcs = ["vector_model_test.py"],

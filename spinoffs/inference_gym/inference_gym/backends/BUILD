@@ -17,7 +17,7 @@
 #   against the same.
 
 # [internal] load pytype.bzl (pytype_strict_library)
-# [internal] load strict.bzl
+# Placeholder: py_test
 
 package(
     # default_applicable_licenses
@@ -41,7 +41,6 @@ py_library(
     srcs = ["util.py"],
 )
 
-# py_strict
 py_test(
     name = "jax_integration_test",
     srcs = ["jax_integration_test.py"],
@@ -51,7 +50,6 @@ py_test(
     ],
 )
 
-# py_strict
 py_test(
     name = "numpy_integration_test",
     srcs = ["numpy_integration_test.py"],
@@ -61,7 +59,6 @@ py_test(
     ],
 )
 
-# py_strict
 py_test(
     name = "tensorflow_integration_test",
     srcs = ["tensorflow_integration_test.py"],

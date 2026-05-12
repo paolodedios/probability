@@ -16,8 +16,8 @@
 #   Internal utilities for the inference gym.
 
 # [internal] load pytype.bzl (pytype_library, pytype_strict_library)
-# [internal] load strict.bzl
 # Placeholder: py_library
+# Placeholder: py_test
 
 package(
     # default_applicable_licenses
@@ -48,7 +48,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "array_to_source_test",
     srcs = ["array_to_source_test.py"],
@@ -68,7 +67,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "data_test",
     srcs = ["data_test.py"],
@@ -92,7 +90,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "ground_truth_encoding_test",
     srcs = ["ground_truth_encoding_test.py"],
@@ -125,7 +122,6 @@ py_library(
     ],
 )
 
-# py_strict
 py_test(
     name = "test_util_test",
     srcs = ["test_util_test.py"],
